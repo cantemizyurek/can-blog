@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build-prisma": "pnpm dlx prisma migrate dev"
+    "migrate-prisma": "pnpm dlx prisma migrate dev"
   },
   "dependencies": {
     "@prisma/client": "^5.6.0",

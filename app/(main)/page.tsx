@@ -1,20 +1,20 @@
 import PostDisplay from './PostDisplay'
+import getPosts from './getPosts'
 
-export default function Home() {
+export default async function Home() {
+  const posts = await getPosts()
+
   return (
     <ul className="w-80 mx-auto m-4 space-y-4">
-      <PostDisplay
-        title="Hello World"
-        description="This is a test post"
-        date={Date.now()}
-        id="hello-world"
-      />
-      <PostDisplay
-        title="Hello World"
-        description="This is a test post"
-        date={Date.now()}
-        id="hello-world"
-      />
+      {posts.map(post => (
+        <PostDisplay
+          key={post.id}
+          title={post.title}
+          description={post.description}
+          date={post.createdAt.getTime()}
+          id={post.id}
+        />
+      ))}
     </ul>
   )
 }
