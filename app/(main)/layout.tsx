@@ -1,4 +1,5 @@
 import '../globals.css'
+import Footer from './Footer'
 import Header from './Header'
 
 export default function RootLayout({
@@ -8,9 +9,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-zinc-900 text-rose-100">
+      <body className="bg-zinc-900 text-rose-100 flex flex-col min-h-screen">
         <Header />
-        {children}
+        <main className="flex-grow">{children}</main>
+        <Footer />
       </body>
     </html>
   )
