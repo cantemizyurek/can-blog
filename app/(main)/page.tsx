@@ -11,7 +11,7 @@ export default async function Home() {
           key={post.id}
           title={post.title}
           description={post.description}
-          date={post.createdAt.getTime()}
+          date={post.createdAt}
           id={post.id}
         />
       ))}
