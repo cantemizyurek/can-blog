@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import PostCard from './PostCard'
-import getPosts from '../getPosts'
+import getPosts from './getPosts'
 
 export default async function Page() {
   const posts = await getPosts()
@@ -24,6 +24,7 @@ export default async function Page() {
             description={post.description}
             date={post.createdAt}
             id={post.id}
+            published={post.published}
           />
         ))}
       </ul>
