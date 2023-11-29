@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className="p-4 mx-4 flex justify-between items-center text-rose-200">
+    <header className="p-4 px-8 flex justify-between items-center text-rose-200 bg-gradient-to-b from-zinc-800 to-zinc-900">
       <h1 className="text-4xl font-bold">
         <Link href="/">Can Temizyurek</Link>
       </h1>
