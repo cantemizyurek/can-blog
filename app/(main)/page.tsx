@@ -1,5 +1,5 @@
 import PostDisplay from './PostDisplay'
-import getPosts from './getPosts'
+import getPosts from '../getPosts'
 
 export default async function Home() {
   const posts = await getPosts()
