@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 export default function Page() {
   return (
     <main className="p-4 mx-auto w-64 md:w-96 lg:w-[560px]">
