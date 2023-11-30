@@ -2,7 +2,7 @@ import { FaXTwitter, FaGithub, FaLinkedin } from 'react-icons/fa6'
 
 export default function Footer() {
   return (
-    <footer className="p-4 flex justify-center items-center text-rose-200 space-x-4">
+    <footer className="p-4 flex justify-center items-center text-pink-200 space-x-4">
       <a
         href="https://twitter.com/_cantemizyurek"
         target="_blank"

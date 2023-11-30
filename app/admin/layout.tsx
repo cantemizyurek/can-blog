@@ -1,15 +1,22 @@
-import '../globals.css'
+import { redirect } from 'next/navigation'
+import { cookies } from 'next/headers'
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  return (
-    <html lang="en">
-      <body className="bg-zinc-900 text-pink-100 flex flex-col">
-        {children}
-      </body>
-    </html>
-  )
+  const cookieList = cookies()
+
+  if (!cookieList.has('admin')) {
+    redirect('/login')
+  }
+
+  const adminCookie = cookieList.get('admin')
+
+  if (adminCookie?.value !== 'cantemizyurek') {
+    redirect('/login')
+  }
+
+  return <>{children}</>
 }
