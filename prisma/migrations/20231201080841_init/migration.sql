@@ -1,10 +1,10 @@
 -- CreateTable
 CREATE TABLE "Post" (
-    "id" TEXT NOT NULL,
-    "title" TEXT NOT NULL,
-    "content" TEXT NOT NULL,
-    "description" TEXT NOT NULL,
-    "published" BOOLEAN NOT NULL DEFAULT false,
+    "id" STRING NOT NULL,
+    "title" STRING NOT NULL,
+    "content" STRING NOT NULL,
+    "description" STRING NOT NULL,
+    "published" BOOL NOT NULL DEFAULT false,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 
