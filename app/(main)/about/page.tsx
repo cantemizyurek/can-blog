@@ -1,3 +1,11 @@
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Can Temizyurek | About',
+  description: 'About page of Can Temizyurek',
+  creator: 'Can Temizyurek',
+}
+
 /* eslint-disable react/no-unescaped-entities */
 export default function Page() {
   return (

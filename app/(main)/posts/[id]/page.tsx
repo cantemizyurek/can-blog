@@ -1,6 +1,8 @@
 import Markdown from 'react-markdown'
 import getPost from './getPost'
 import { notFound } from 'next/navigation'
+import { Metadata } from 'next'
+import prisma from '@/app/utils/prismaSingleton'
 
 interface Params {
   id: string
@@ -8,6 +10,32 @@ interface Params {
 
 interface Props {
   params: Params
+}
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const post = await prisma.post.findUnique({
+    where: {
+      id: params.id,
+    },
+    select: {
+      title: true,
+      description: true,
+    },
+  })
+
+  if (!post) {
+    return {
+      title: 'Can Temizyurek | Not Found',
+      description: 'Not found page of Can Temizyurek',
+      creator: 'Can Temizyurek',
+    }
+  }
+
+  return {
+    title: `Can Temizyurek | ${post.title}`,
+    description: post.description,
+    creator: 'Can Temizyurek',
+  }
 }
 
 export default async function Page({ params }: Props) {

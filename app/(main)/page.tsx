@@ -1,7 +1,14 @@
+import { Metadata } from 'next'
 import PostDisplay from './PostDisplay'
 import getPosts from './getPosts'
 
 export const dynamic = 'force-dynamic'
+
+export const metadata: Metadata = {
+  title: 'Can Temizyurek | Blog',
+  description: 'Personal blog of Can Temizyurek',
+  creator: 'Can Temizyurek',
+}
 
 export default async function Home() {
   const posts = await getPosts()
