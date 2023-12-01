@@ -46,7 +46,7 @@ export default async function Page({ params }: Props) {
   }
 
   return (
-    <div className="mx-auto m-4 space-y-4 responsive-container">
+    <div className="mx-auto m-4 space-y-4 responsive-container selection:bg-pink-100 selection:text-zinc-900 ">
       <h1 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold">
         {post?.title}
       </h1>
