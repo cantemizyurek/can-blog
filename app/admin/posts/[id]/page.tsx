@@ -70,7 +70,7 @@ export default async function Page({ params }: Props) {
             },
           })
 
-          revalidatePath('/')
+          revalidatePath('/', 'layout')
           redirect(`/admin/posts/${newId}`)
         }}
       />
