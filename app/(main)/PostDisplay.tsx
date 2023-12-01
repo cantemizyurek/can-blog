@@ -12,10 +12,12 @@ export default function PostDisplay({ title, description, date, id }: Props) {
   return (
     <li>
       <Link href={`/posts/${id}`}>
-        <h2 className="text-base md:text-lg lg:text-xl font-semibold">
+        <h2 className="font-semibold text-xl xl:text-2xl 2xl:text-3xl">
           {title}
         </h2>
-        <p className="text-sm md:text-base">{description}</p>
+        <p className="text-sm md:text-base lg:text-lg xl:text-xl">
+          {description}
+        </p>
         <div className="flex justify-between">
           <span></span>
           <p className="text-xs md:text-sm text-zinc-400">{calcAgo(date)}</p>

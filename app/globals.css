@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .responsive-container {
+    @apply w-64 md:w-96 lg:w-[560px] xl:w-[680px] 2xl:w-[800px];
+  }
+}

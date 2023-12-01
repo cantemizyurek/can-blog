@@ -46,12 +46,14 @@ export default async function Page({ params }: Props) {
   }
 
   return (
-    <div className="mx-auto m-4 space-y-4 w-64 md:w-96 lg:w-[560px]">
-      <h1 className="text-4xl font-bold">{post?.title}</h1>
-      <p className="text-xs md:text-sm text-gray-500">
+    <div className="mx-auto m-4 space-y-4 responsive-container">
+      <h1 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold">
+        {post?.title}
+      </h1>
+      <p className="text-gray-500 text-xs md:text-sm lg:text-base xl:text-lg">
         {post?.createdAt.toLocaleDateString()}
       </p>
-      <Markdown className="prose max-w-full prose-invert">
+      <Markdown className="prose max-w-full prose-invert lg:prose-lg xl:prose-xl">
         {post?.content}
       </Markdown>
     </div>

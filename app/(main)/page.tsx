@@ -14,7 +14,7 @@ export default async function Home() {
   const posts = await getPosts()
 
   return (
-    <ul className="mx-auto m-4 space-y-4 w-64 md:w-96 lg:w-[560px]">
+    <ul className="mx-auto m-4 space-y-4 responsive-container">
       {posts.map(post => (
         <PostDisplay
           key={post.id}

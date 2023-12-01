@@ -15,7 +15,7 @@ interface Props {
 
 export default async function Page({ params }: Props) {
   return (
-    <main className="px-4 mx-auto w-64 md:w-96 lg:w-[560px]">
+    <main className="px-4 mx-auto responsive-container">
       <PostEditor
         title=""
         content=""
