@@ -7,6 +7,7 @@ export default function Footer() {
         href="https://twitter.com/_cantemizyurek"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Twitter"
       >
         <FaXTwitter className="text-3xl" />
       </a>
@@ -14,6 +15,7 @@ export default function Footer() {
         href="https://github.com/cantemizyurek"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Github"
       >
         <FaGithub className="text-3xl" />
       </a>
@@ -21,6 +23,7 @@ export default function Footer() {
         href="https://www.linkedin.com/in/can-temizyurek-013614267/"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Linkedin"
       >
         <FaLinkedin className="text-3xl" />
       </a>
