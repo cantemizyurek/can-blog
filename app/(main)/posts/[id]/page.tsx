@@ -72,6 +72,7 @@ export default async function Page({ params }: Props) {
       <Markdown className="prose max-w-full prose-invert lg:prose-lg xl:prose-xl">
         {post?.content}
       </Markdown>
+      {Date.now()}
     </div>
   )
 }
