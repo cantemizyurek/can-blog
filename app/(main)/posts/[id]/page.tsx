@@ -59,8 +59,6 @@ export default async function Page({ params }: Props) {
     return notFound()
   }
 
-  console.log('render post', post.title)
-
   return (
     <div className="mx-auto m-4 space-y-4 responsive-container selection:bg-pink-100 selection:text-zinc-900 ">
       <h1 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold">
@@ -72,7 +70,6 @@ export default async function Page({ params }: Props) {
       <Markdown className="prose max-w-full prose-invert lg:prose-lg xl:prose-xl">
         {post?.content}
       </Markdown>
-      {Date.now()}
     </div>
   )
 }
