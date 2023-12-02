@@ -12,6 +12,8 @@ interface Props {
   params: Params
 }
 
+export const revalidate = 3600
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await prisma.post.findUnique({
     where: {
@@ -50,7 +52,7 @@ export default async function Page({ params }: Props) {
       <h1 className="text-3xl lg:text-4xl xl:text-5xl 2xl:text-6xl font-bold">
         {post?.title}
       </h1>
-      <p className="text-gray-500 text-xs md:text-sm lg:text-base xl:text-lg">
+      <p className="text-zinc-400 text-xs md:text-sm lg:text-base xl:text-lg">
         {post?.createdAt.toLocaleDateString()}
       </p>
       <Markdown className="prose max-w-full prose-invert lg:prose-lg xl:prose-xl">
