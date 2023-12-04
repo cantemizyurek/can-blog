@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import PostDisplay from './PostDisplay'
 import getPosts from './getPosts'
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 60
 
 export const metadata: Metadata = {
   title: 'Can Temizyurek | Blog',
