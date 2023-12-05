@@ -12,7 +12,7 @@ interface Props {
   params: Params
 }
 
-export const revalidate = 3600
+export const revalidate = 60
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = await prisma.post.findUnique({
